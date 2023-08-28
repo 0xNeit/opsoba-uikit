@@ -1,14 +1,14 @@
 {
-  "https://tokens.pancakeswap.finance/pancakeswap-default.json": {
+  "https://raw.githubusercontent.com/0xNeit/opsoba-uikit/master/packages/token-lists/lists/pancakeswap-default.json": {
     "name": "PancakeSwap Default",
     "homepage": "https://pancakeswap.finance"
   },
-  "https://tokens.pancakeswap.finance/pancakeswap-extended.json": {
+  "https://raw.githubusercontent.com/0xNeit/opsoba-uikit/master/packages/token-lists/lists/pancakeswap-extended.json": {
     "name": "PancakeSwap Extended",
     "homepage": "https://pancakeswap.finance"
     
   },
-  "https://tokens.pancakeswap.finance/pancakeswap-top-100.json": {
+  "https://raw.githubusercontent.com/0xNeit/opsoba-uikit/master/packages/token-lists/lists/pancakeswap-top-100.json": {
     "name": "PancakeSwap Top 100",
     "homepage": "https://pancakeswap.finance"
     
