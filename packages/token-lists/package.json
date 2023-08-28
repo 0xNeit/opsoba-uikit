@@ -1,6 +1,6 @@
 {
   "name": "opsoba-token-lists",
-  "version": "2.27.0",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "type": "module",
   "license": "MIT",
