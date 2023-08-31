@@ -19,7 +19,6 @@ export const unmountAnimation = keyframes`
     }
   `;
 
-
 export const DrawerContainer = styled.div<{ isUnmounting: boolean }>`
   width: 100%;
   height: 80vh;

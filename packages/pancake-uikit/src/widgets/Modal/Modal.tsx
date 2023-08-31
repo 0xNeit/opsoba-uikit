@@ -5,12 +5,17 @@ import Heading from "../../components/Heading/Heading";
 import getThemeValue from "../../util/getThemeValue";
 import { ModalBody, ModalHeader, ModalTitle, ModalContainer, ModalCloseButton, ModalBackButton } from "./styles";
 import { ModalProps, ModalWrapperProps } from "./types";
-import { useMatchBreakpoints } from '../../hooks'
+import { useMatchBreakpoints } from "../../hooks";
 
 export const MODAL_SWIPE_TO_CLOSE_VELOCITY = 300;
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const ModalWrapper = ({ children, onDismiss, minWidth, ...props }: React.PropsWithChildren<ModalWrapperProps>) => {
+export const ModalWrapper = ({
+  children,
+  onDismiss,
+  minWidth,
+  ...props
+}: React.PropsWithChildren<ModalWrapperProps>) => {
   const { isMobile } = useMatchBreakpoints();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -36,7 +41,6 @@ export const ModalWrapper = ({ children, onDismiss, minWidth, ...props }: React.
     </ModalContainer>
   );
 };
-
 
 const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
   title,
