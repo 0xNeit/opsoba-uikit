@@ -45,6 +45,9 @@ export * from "./widgets/Modal";
 export * from "./widgets/Menu";
 export * from "./widgets/WalletModal";
 
+// AnimationToolkit
+export * from "./util/animationToolkit";
+
 // Theme
 export { default as ResetCSS } from "./ResetCSS";
 export * from "./theme";

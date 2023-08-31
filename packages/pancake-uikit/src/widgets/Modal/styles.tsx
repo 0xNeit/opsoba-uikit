@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Flex from "../../components/Box/Flex";
-import { Box } from "../../components/Box";
+import { MotionBox } from "../../components/Box";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { ModalProps } from "./types";
@@ -41,19 +41,26 @@ export const ModalBackButton: React.FC<{ onBack: ModalProps["onBack"] }> = ({ on
   );
 };
 
-export const ModalContainer = styled(Box)<{ minWidth: string }>`
+export const ModalContainer = styled(MotionBox)<{ $minWidth: string }>`
   overflow: hidden;
   background: ${({ theme }) => theme.modal.background};
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 32px;
+  border-radius: 32px 32px 0px 0px;
   width: 100%;
-  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   z-index: ${({ theme }) => theme.zIndices.modal};
+  position: absolute;
+  min-width: ${({ $minWidth }) => $minWidth};
+  bottom: 0;
+  max-width: none !important;
+  min-height: 300px;
 
-  ${({ theme }) => theme.mediaQueries.xs} {
+  ${({ theme }) => theme.mediaQueries.md} {
     width: auto;
-    min-width: ${({ minWidth }) => minWidth};
-    max-width: 100%;
+    position: auto;
+    bottom: auto;
+    border-radius: 32px;
+    max-height: 100vh;
   }
 `;

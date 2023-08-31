@@ -1,11 +1,44 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import React, { useRef } from "react";
 import { useTheme } from "styled-components";
 import Heading from "../../components/Heading/Heading";
 import getThemeValue from "../../util/getThemeValue";
 import { ModalBody, ModalHeader, ModalTitle, ModalContainer, ModalCloseButton, ModalBackButton } from "./styles";
-import { ModalProps } from "./types";
+import { ModalProps, ModalWrapperProps } from "./types";
+import { useMatchBreakpoints } from '../../hooks'
 
-const Modal: React.FC<ModalProps> = ({
+export const MODAL_SWIPE_TO_CLOSE_VELOCITY = 300;
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const ModalWrapper = ({ children, onDismiss, minWidth, ...props }: React.PropsWithChildren<ModalWrapperProps>) => {
+  const { isMobile } = useMatchBreakpoints();
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  return (
+    // @ts-ignore
+    <ModalContainer
+      drag={isMobile ? "y" : false}
+      dragConstraints={{ top: 0, bottom: 600 }}
+      dragElastic={{ top: 0 }}
+      dragSnapToOrigin
+      onDragStart={() => {
+        if (wrapperRef.current) wrapperRef.current.style.animation = "none";
+      }}
+      // @ts-ignore
+      onDragEnd={(e, info) => {
+        if (info.velocity.y > MODAL_SWIPE_TO_CLOSE_VELOCITY && onDismiss) onDismiss();
+      }}
+      ref={wrapperRef}
+      $minWidth={minWidth}
+      {...props}
+    >
+      {children}
+    </ModalContainer>
+  );
+};
+
+
+const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
   title,
   onDismiss,
   onBack,
@@ -18,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   const theme = useTheme();
   return (
-    <ModalContainer minWidth={minWidth} {...props}>
+    <ModalWrapper minWidth={minWidth} onDismiss={onDismiss} {...props}>
       <ModalHeader background={getThemeValue(`colors.${headerBackground}`, headerBackground)(theme)}>
         <ModalTitle>
           {onBack && <ModalBackButton onBack={onBack} />}
@@ -27,7 +60,7 @@ const Modal: React.FC<ModalProps> = ({
         {!hideCloseButton && <ModalCloseButton onDismiss={onDismiss} />}
       </ModalHeader>
       <ModalBody p={bodyPadding}>{children}</ModalBody>
-    </ModalContainer>
+    </ModalWrapper>
   );
 };
 
