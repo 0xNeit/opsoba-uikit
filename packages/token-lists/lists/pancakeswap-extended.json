@@ -13,6 +13,22 @@
   ],
   "tokens": [
     {
+      "name": "WBNB Token",
+      "symbol": "WBNB",
+      "address": "0x4200000000000000000000000000000000000006",
+      "chainId": 5611,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+    },
+    {
+      "name": "WBNB Token",
+      "symbol": "WBNB",
+      "address": "0x4200000000000000000000000000000000000006",
+      "chainId": 204,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+    },
+    {
       "name": "SobaSwap Token",
       "symbol": "SOBA",
       "address": "0x5643b96d07e49decc24d8b559a00d63498aea47b",
@@ -21,12 +37,12 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
-      "name": "Binance Pegged Bitcoin",
-      "symbol": "BTCB",
-      "address": "0x6a8E10363190e530ce78dce091263C8989edDcDe",
-      "chainId": 5611,
+      "name": "SobaSwap Token",
+      "symbol": "SOBA",
+      "address": "0xa8a20DDEB8eD9a3f38B455a45CC54250c6Dd8226",
+      "chainId": 204,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
     },
     {
       "name": "Binance Pegged BUSD",
@@ -37,28 +53,12 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
     },
     {
-      "name": "Binance Pegged DAI",
-      "symbol": "DAI",
-      "address": "0xeD7047f66976b6C26F490768F8BC68700C8F6031",
+      "name": "Binance Pegged BUSD",
+      "symbol": "BUSD",
+      "address": "0x5e6A78Dc6ad966433271CD2E352A3226e617bf81",
       "chainId": 5611,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.png"
-    },
-    {
-      "name": "Binance Pegged ETH",
-      "symbol": "ETH",
-      "address": "0xd9d0e6ffbE145Afb664B496759417B776986301A",
-      "chainId": 5611,
-      "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
-    },
-    {
-      "name": "Binance Pegged USD Coin",
-      "symbol": "USDC",
-      "address": "0xDaDE452E38F8de05aAD12F29B4bF934C944860a3",
-      "chainId": 5611,
-      "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
     },
     {
       "name": "Binance Pegged USDT",
@@ -69,12 +69,36 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x55d398326f99059fF775485246999027B3197955.png"
     },
     {
-      "name": "WBNB Token",
-      "symbol": "WBNB",
-      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Binance Pegged Bitcoin",
+      "symbol": "BTCB",
+      "address": "0x6a8E10363190e530ce78dce091263C8989edDcDe",
       "chainId": 5611,
       "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png"
+    },
+    {
+      "name": "Binance Pegged ETH",
+      "symbol": "ETH",
+      "address": "0xd9d0e6ffbE145Afb664B496759417B776986301A",
+      "chainId": 5611,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+    },
+    {
+      "name": "Binance Pegged DAI",
+      "symbol": "DAI",
+      "address": "0xeD7047f66976b6C26F490768F8BC68700C8F6031",
+      "chainId": 5611,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.png"
+    },
+    {
+      "name": "Binance Pegged USD Coin",
+      "symbol": "USDC",
+      "address": "0xDaDE452E38F8de05aAD12F29B4bF934C944860a3",
+      "chainId": 5611,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
     }
   ]
 }
